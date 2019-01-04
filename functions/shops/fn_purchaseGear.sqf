@@ -11,7 +11,7 @@ private _class		= _purchase param [0,"",[""]];
 private _price		= _purchase param [1,0,[0]];
 private _text		= _purchase param [4,"%1",[""]];
 
-if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштів щоб придбати це!";};
+if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштiв щоб придбати це!";};
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";

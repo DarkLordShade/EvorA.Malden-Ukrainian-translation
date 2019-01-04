@@ -9,4 +9,4 @@ if ((_score == 0) or {score _giver < _score}) exitWith {};
 
 _giver addScore (-_score);
 _taker addScore _score;
-(format ["%1 УО отримано від %2",_score,name _giver]) remoteExecCall ["hint",_taker,false];
+(format ["%1 УО отримано вiд %2",_score,name _giver]) remoteExecCall ["hint",_taker,false];

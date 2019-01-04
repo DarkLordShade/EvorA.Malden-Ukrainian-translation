@@ -24,7 +24,7 @@ private _taskName = if ([_objFlags,1] call BIS_fnc_bitflagsCheck) then {_objName
 	EVOR_var_SideFriendly,
 	"task_"+_objName,
 	[
-		format ["Знайдіть та знищіть радіовежу в %1 щоб позбавити ворога можливості викликати поповнення, потім зачистіть місто від ворожих солдат що залишились.",_taskName],
+		format ["Знайдiть та знищiть радiовежу в %1 щоб позбавити ворога можливостi викликати поповнення, потiм зачистiть мiсто вiд ворожих солдат що залишились.",_taskName],
 		"Capture "+_taskName,
 		_taskName
 	],_objPos,"Assigned",1,true,"Attack",true
@@ -44,7 +44,7 @@ _objRT addEventHandler [
 			if (_damage >= 1) then {
 				[
 					[EVOR_var_SideFriendly,"HQ"],
-					format ["Гарно спрацьовано! %1 знищив ворожу радіовежу, тим самим позбавивши ворога можливості викликати підтримку в подальшому!",[name _source,"Somebody"] select isNull _source]
+					format ["Гарно спрацьовано! %1 знищив ворожу радiовежу, тим самим позбавивши ворога можливостi викликати пiдтримку в подальшому!",[name _source,"Somebody"] select isNull _source]
 				] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 				if (isMultiplayer and {!isNull _source}) then {_source addScore EVOR_var_ScoreObjRT;};
 

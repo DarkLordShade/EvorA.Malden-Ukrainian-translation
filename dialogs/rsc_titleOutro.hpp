@@ -10,7 +10,7 @@ class EVOR_rsc_titleOutro {
 
 	class header: RscStructuredText {
 		idc = -1;
-		text = "<t align = 'center'>МІСІЮ ЗАВЕРШЕНО!</t>";
+		text = "<t align = 'center'>МIСIЮ ЗАВЕРШЕНО!</t>";
 		x = safezoneW * 0.15 + safezoneX;
 		y = safezoneH * 0.15 + safezoneY;
 		w = safezoneW * 0.70;

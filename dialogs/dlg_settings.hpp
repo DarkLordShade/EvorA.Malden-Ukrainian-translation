@@ -5,7 +5,7 @@ class EVOR_dlg_settings {
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_settings"",nil];";
 
 	mark3DRangeValues[] = {50,100,250,500,1000,2000,5000,10000};
-	mark3DColorValues[] = {{"ЧЕРВОНИЙ","[EAST] call BIS_fnc_sideColor"},{"СИНІЙ","[WEST] call BIS_fnc_sideColor"},{"ЗЕЛЕНИЙ","[INDEPENDENT] call BIS_fnc_sideColor"},{"ПУРПУРОВИЙ","[CIVILIAN] call BIS_fnc_sideColor"},{"СІРИЙ","[0.5,0.5,0.5,1]"},{"БІЛИЙ","[1,1,1,1]"}};
+	mark3DColorValues[] = {{"ЧЕРВОНИЙ","[EAST] call BIS_fnc_sideColor"},{"СИНIЙ","[WEST] call BIS_fnc_sideColor"},{"ЗЕЛЕНИЙ","[INDEPENDENT] call BIS_fnc_sideColor"},{"ПУРПУРОВИЙ","[CIVILIAN] call BIS_fnc_sideColor"},{"СIРИЙ","[0.5,0.5,0.5,1]"},{"БIЛИЙ","[1,1,1,1]"}};
 	visTerrainValues[] = {"НИЗЬКО","СТАНДАРТНО","ВИСОКО","ДУЖЕ ВИСОКО","УЛЬТРА"};
 
 	class controls {
@@ -17,7 +17,7 @@ class EVOR_dlg_settings {
 			y = safezoneH * 0.175 + safezoneY;
 			w = safezoneW * 0.400;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>НАЛАШТУВАННЯ МІСІЇ</t><t align = 'right'>%1</t>"",profileName];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>НАЛАШТУВАННЯ МIСIЇ</t><t align = 'right'>%1</t>"",profileName];";
 		};
 		class fps: RscStructuredText {
 			idc = 1001;
@@ -47,7 +47,7 @@ class EVOR_dlg_settings {
 		};
 		class headVisibility: RscText {
 			idc = 1004;
-			text = "ВИДИМІСТЬ";
+			text = "ВИДИМIСТЬ";
 			colorbackground[] = {0,0,0,1};
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.425 + safezoneY;
@@ -58,7 +58,7 @@ class EVOR_dlg_settings {
 		// Controls text
 		class textMarkerEnabled: RscStructuredText {
 			idc = 1005;
-			text = "<t align = 'right'>УВІМКНУТО: </t>";
+			text = "<t align = 'right'>УВIМКНУТО: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.250 + safezoneY;
 			w = safezoneW * 0.100;
@@ -66,7 +66,7 @@ class EVOR_dlg_settings {
 		};
 		class textMarkerRange: RscStructuredText {
 			idc = 1006;
-			text = "<t align = 'right'>ДАЛЬНІСТЬ: </t>";
+			text = "<t align = 'right'>ДАЛЬНIСТЬ: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.275 + safezoneY;
 			w = safezoneW * 0.100;
@@ -74,7 +74,7 @@ class EVOR_dlg_settings {
 		};
 		class textMarkerColor: RscStructuredText {
 			idc = 1007;
-			text = "<t align = 'right'>КОЛІР: </t>";
+			text = "<t align = 'right'>КОЛIР: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.300 + safezoneY;
 			w = safezoneW * 0.100;
@@ -98,7 +98,7 @@ class EVOR_dlg_settings {
 		};
 		class textVisShadow: RscStructuredText {
 			idc = 1010;
-			text = "<t align = 'right'>ТІНІ: </t>";
+			text = "<t align = 'right'>ТIНI: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.500 + safezoneY;
 			w = safezoneW * 0.100;

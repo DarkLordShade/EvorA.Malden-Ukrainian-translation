@@ -22,7 +22,7 @@ Both the standard treatment and triage consume a FAK.
 ]];
 
 // Support network
-player createDiaryRecord ["Diary",["Меню Підтримки",
+player createDiaryRecord ["Diary",["Меню Пiдтримки",
 format ["
 The Support Network is the main interface during your mission, but can only be accessed from one of our bases.
 The interface gives access to various sections which are explained below:
@@ -150,7 +150,7 @@ It is also possible to perform HALO-jumps when you have access to an airfield.
 player createDiaryRecord ["Diary",["Facilities",_textFacilities joinString "<br /><br />"]];
 
 // Mission
-player createDiaryRecord ["Diary",["Місія",
+player createDiaryRecord ["Diary",["Мiсiя",
 format ["
 Objective<br />
 In preparation for our attack, enemy regulars have scattered to strategical positions around %1, where they are regrouping with local forces.

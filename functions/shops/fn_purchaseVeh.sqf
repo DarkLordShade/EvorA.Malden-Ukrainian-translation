@@ -12,7 +12,7 @@ private _price		= _purchase param [1,0,[0]];
 private _text		= _purchase param [4,"%1",[""]];
 _text				= format [_text,getText (configFile >> "CfgVehicles" >> _class >> "displayName")];
 
-if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштів щоб придбати це!";};
+if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштiв щоб придбати це!";};
 
 private _baseIndex = EVOR_list_BaseCore findIf {player distance2D getMarkerPos (_x # 0) < (_x # 1)};
 if (_baseIndex < 0) exitWith {};
@@ -38,4 +38,4 @@ _success = false;
 	};
 } forEach (_spawns select {!isNull _x});
 
-if (!_success) then {hintSilent "Неможливо прибдати транспорт: місце зайнято!";};
+if (!_success) then {hintSilent "Неможливо прибдати транспорт: мiсце зайнято!";};

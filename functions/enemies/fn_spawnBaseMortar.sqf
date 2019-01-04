@@ -62,7 +62,7 @@ for "_i" from 1 to _nMortGrp do {
 	sleep 0.5;
 };
 
-[[EVOR_var_SideFriendly,"HQ"],format ["Ворожі сили встановили міномети поблизу від %1; захопіть позицію!",markerText _mainBaseMarker]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+[[EVOR_var_SideFriendly,"HQ"],format ["Ворожi сили встановили мiномети поблизу вiд %1; захопiть позицiю!",markerText _mainBaseMarker]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 
 [_allUnits] call EVOR_fnc_setUnitSkill;
 

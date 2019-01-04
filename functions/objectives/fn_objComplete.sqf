@@ -39,10 +39,10 @@ deleteVehicle _objRT;
 if ([_objFlags,1] call BIS_fnc_bitflagsCheck) then {[_objActive] spawn EVOR_fnc_createAirf;};
 
 if (EVOR_list_ObjectiveQueue findIf {!(_x # 5)} >= 0) then {
-	[[EVOR_var_SideFriendly,"HQ"],"Гарна робота, чувак. Об’єкт захоплено! Очікуй на передислокацію."] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+	[[EVOR_var_SideFriendly,"HQ"],"Гарна робота, чувак. Об’єкт захоплено! Очiкуй на передислокацiю."] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 	sleep random [20,40,50];
 	[] call EVOR_fnc_objCreate;	// Create new objective
 } else {
-	[[EVOR_var_SideFriendly,"HQ"],"Гарна робота, дядьку! Ти завершив місію!"] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+	[[EVOR_var_SideFriendly,"HQ"],"Гарна робота, дядьку! Ти завершив мiсiю!"] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 	[EVOR_var_OutroMusic] remoteExec ["EVOR_fnc_cinematicOutro",0,false];		// End mission
 };

@@ -27,7 +27,7 @@ _unit addEventHandler [
 			_unit removeAllEventHandlers "HandleDamage";
 			_unit setVariable ["EVOR_var_KillAssists",nil,false];
 			{_x addScore EVOR_var_ScoreKillAssist;} forEach _assistArray;
-			(format ["%1 УО отримано за допопмогу в ліквідації ворожого повітряного транспорту!",EVOR_var_ScoreKillAssist]) remoteExecCall ["hint",_assistArray,false];
+			(format ["%1 УО отримано за допопмогу в лiквiдацiї ворожого повiтряного транспорту!",EVOR_var_ScoreKillAssist]) remoteExecCall ["hint",_assistArray,false];
 		};
 
 		nil;

@@ -56,7 +56,7 @@ for "_i" from 1 to _nAmphibGrp do {
 	sleep 0.5;
 };
 
-[[EVOR_var_SideFriendly,"HQ"],format ["Ворог підготував амфібій для атаки на нашу MOB; готуйтеся відбивати!",markerText _mainBaseMarker]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+[[EVOR_var_SideFriendly,"HQ"],format ["Ворог пiдготував амфiбiй для атаки на нашу MOB; готуйтеся вiдбивати!",markerText _mainBaseMarker]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 
 [_allUnits] call EVOR_fnc_setUnitSkill;
 

@@ -41,7 +41,7 @@ class EVOR_dlg_menu {
 		class headProgress: RscText {
 			idc = 1004;
 			colorbackground[] = {0,0,0,1};
-			text = "ПРОГРЕС МІСІЇ";
+			text = "ПРОГРЕС МIСIЇ";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.385 + safezoneY;
 			w = safezoneW * 0.400;
@@ -69,7 +69,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonVeh: RscButton {
 			idc = 1007;
-			text = "ТЕХНІКА";
+			text = "ТЕХНIКА";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.280 + safezoneY;
 			w = safezoneW * 0.200;
@@ -87,7 +87,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonFund: RscButton {
 			idc = 1009;
-			text = "КЕРУВАННЯ ФІНАНСАМИ";
+			text = "КЕРУВАННЯ ФIНАНСАМИ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.330 + safezoneY;
 			w = safezoneW * 0.200;
@@ -96,7 +96,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonSettings: RscButton {
 			idc = 1010;
-			text = "НАЛАШТУВАННЯ МІСІЇ";
+			text = "НАЛАШТУВАННЯ МIСIЇ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.355 + safezoneY;
 			w = safezoneW * 0.200;
@@ -107,7 +107,7 @@ class EVOR_dlg_menu {
 		// Progress
 		class textStateNumber: RscStructuredText {
 			idc = 1011;
-			text = "<t align = 'right'>Кількість: </t>";
+			text = "<t align = 'right'>Кiлькiсть: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.410 + safezoneY;
 			w = safezoneW * 0.100;
@@ -123,7 +123,7 @@ class EVOR_dlg_menu {
 		};
 		class textStateTower: RscStructuredText {
 			idc = 1013;
-			text = "<t align = 'right'>Радіовежа: </t>";
+			text = "<t align = 'right'>Радiовежа: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.460 + safezoneY;
 			w = safezoneW * 0.100;

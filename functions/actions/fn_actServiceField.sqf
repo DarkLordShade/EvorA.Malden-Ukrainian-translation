@@ -21,7 +21,7 @@ private _actionScript = {
 };
 
 private _actionDur = 10;
-private _actionText = "Польовий ремонт техніки";
+private _actionText = "Польовий ремонт технiки";
 private _actionIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\repair_ca.paa";
 
 [_caller,_actionText,_actionIcon,_actionIcon,_actionCond,_actionCond,nil,nil,_actionScript,nil,nil,_actionDur,-3,false] call BIS_fnc_holdActionAdd;

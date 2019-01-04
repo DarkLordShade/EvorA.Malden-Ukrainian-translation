@@ -26,10 +26,10 @@ if (!isMultiplayer) exitWith {};
 		if (EVOR_var_EnableSaveAllGear or {_banned isEqualTo []}) then {
 				profileNamespace setVariable ["EVOR_var_SavedLoadout",getUnitLoadout player];
 				saveProfileNamespace;
-				hint "Інвентар збережено!";
+				hint "Iнвентар збережено!";
 		} else {
 			private _bannedStrings = _banned apply {getText (configFile >> (["CfgWeapons","CfgVehicles"] select (_x isKindOf "Bag_Base")) >> _x >> "displayname")};
-			hint format ["Помилка збереження інвентаря!\nВиявлено непридбане спорядження:\n\n%1",_bannedStrings joinString "\n"];
+			hint format ["Помилка збереження iнвентаря!\nВиявлено непридбане спорядження:\n\n%1",_bannedStrings joinString "\n"];
 		};
 	}
 ] call BIS_fnc_addScriptedEventHandler;

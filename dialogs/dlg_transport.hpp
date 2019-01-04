@@ -41,7 +41,7 @@ class EVOR_dlg_transport {
 		};
 		class headDestination: RscText {
 			idc = 1003;
-			text = "ОБЕРІТЬ ПРИЗНАЧЕННЯ";
+			text = "ОБЕРIТЬ ПРИЗНАЧЕННЯ";
 			x = safezoneW * 0.200 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.195;

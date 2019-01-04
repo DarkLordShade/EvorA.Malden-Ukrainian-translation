@@ -21,7 +21,7 @@ if (count EVOR_list_PurchasedUnits >= EVOR_var_MaxUnits) exitWith {
 	hintSilent format ["Ви можете винайняти лише %1 найманця зараз!",EVOR_var_MaxUnits];
 };
 
-if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштів щоб придбати це!";};
+if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштiв щоб придбати це!";};
 
 private _spawnPos = AGLToASL (player modelToWorld [0,5,0]);
 private _spawnDir = getDir player - 180;

@@ -9,7 +9,7 @@ private _caller = param [1,player,[objNull]];
 private _baseIndex = EVOR_list_BaseCore findIf {_caller distance2D getMarkerPos (_x # 0) < (_x # 1)};
 if (_baseIndex < 0) exitWith {};
 private _baseName = toUpper markerText (EVOR_list_BaseCore select _baseIndex select 0);
-private _text = format ["<t align = 'left'>ВІТАЄМО В %1</t><t align = 'right'>%2</t>",_baseName,profileName];
+private _text = format ["<t align = 'left'>ВIТАЄМО В %1</t><t align = 'right'>%2</t>",_baseName,profileName];
 
 private _dlgMenu = "EVOR_dlg_menu";
 createDialog _dlgMenu;

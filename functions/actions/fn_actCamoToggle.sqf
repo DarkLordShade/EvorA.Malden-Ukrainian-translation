@@ -20,4 +20,4 @@ private _actionScript = {
 };
 
 private _actionID = _veh addAction ["",_actionScript,_animSources,0,true,true,"",_actionCond,10];
-_veh setUserActionText [_actionID,"Розгорнути камуфляжну сітку"];
+_veh setUserActionText [_actionID,"Розгорнути камуфляжну сiтку"];

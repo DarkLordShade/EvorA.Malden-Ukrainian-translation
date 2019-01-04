@@ -15,7 +15,7 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.175 + safezoneY;
 			w = safezoneW * 0.400;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>КЕРУВАННЯ ФІНАНСАМИ</t><t align = 'right'>%1</t>"",profileName];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>КЕРУВАННЯ ФIНАНСАМИ</t><t align = 'right'>%1</t>"",profileName];";
 		};
 		class score: RscStructuredText {
 			idc = 1001;
@@ -36,7 +36,7 @@ class EVOR_dlg_funds {
 		};
 		class headPlayers: RscText {
 			idc = 1003;
-			text = "ГРАВЦІ";
+			text = "ГРАВЦI";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.125;
@@ -45,7 +45,7 @@ class EVOR_dlg_funds {
 		};
 		class headFunds: RscText {
 			idc = 1004;
-			text = "ФІНАНСИ";
+			text = "ФIНАНСИ";
 			x = safezoneW * 0.425 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.075;
@@ -96,7 +96,7 @@ class EVOR_dlg_funds {
 		// Score displays
 		class textInf: RscStructuredText {
 			idc = 1009;
-			text = "<t align='left'>Піхота: </t><t align = 'right'>1</t>";
+			text = "<t align='left'>Пiхота: </t><t align = 'right'>1</t>";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.450 + safezoneY;
 			w = safezoneW * 0.200;
@@ -120,7 +120,7 @@ class EVOR_dlg_funds {
 		};
 		class textAir: RscStructuredText {
 			idc = 1012;
-			text = "<t align='left'>Повітрянні судна: </t><t align = 'right'>5</t>";
+			text = "<t align='left'>Повiтряннi судна: </t><t align = 'right'>5</t>";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.525 + safezoneY;
 			w = safezoneW * 0.200;
@@ -140,7 +140,7 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.575 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Радіовежа: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreObjRT];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Радiовежа: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreObjRT];";
 		};
 		class textAssist: RscStructuredText {
 			idc = 1015;
@@ -148,7 +148,7 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.600 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Надання допомоги атаці з повітря: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreKillAssist];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Надання допомоги при атацi з повiтря: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreKillAssist];";
 		};
 
 		// Buttons

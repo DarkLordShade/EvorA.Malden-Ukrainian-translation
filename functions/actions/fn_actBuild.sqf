@@ -12,7 +12,7 @@ private _actionScript = {
 	private _fobPos	= getPos _veh;
 
 	private _baseMarkers = EVOR_list_BaseCore apply {_x select 0};
-	if (_baseMarkers findIf {_fobPos distance2D getMarkerPos _x < EVOR_var_FOBDistance} >= 0) exitWith {hint "Занадто близько до існуючої бази!";};
+	if (_baseMarkers findIf {_fobPos distance2D getMarkerPos _x < EVOR_var_FOBDistance} >= 0) exitWith {hint "Занадто близько до iснуючої бази!";};
 
 	private _obstructions = [
 		"TREE","SMALL TREE","BUILDING","HOUSE","CHURCH","CHAPEL","CROSS",
@@ -22,7 +22,7 @@ private _actionScript = {
 		"POWERWAVE","POWERWIND","SHIPWRECK"
 	];
 
-	if (surfaceIsWater _fobPos) exitWith {hint "Будування на воді!";};
+	if (surfaceIsWater _fobPos) exitWith {hint "Будування на водi!";};
 	if (_fobPos isFlatEmpty [-1,-1,0.3,10,-1,false] isEqualTo []) exitWith {hint "Дуже круто для будування!";};
 	if (!(nearestTerrainObjects [_fobPos,_obstructions,10,false,true] isEqualTo [])) exitWith {hint "Перешкода для будування!";};
 

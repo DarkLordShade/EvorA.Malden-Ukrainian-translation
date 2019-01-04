@@ -4,8 +4,8 @@ class EVOR_dlg_shop {
 	onLoad = "uiNamespace setVariable [""EVOR_dlg_shop"",_this select 0];";
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_shop"",nil];";
 
-	typeListTitles[] = {{"ЗБРОЯ","СПОРЯДЖЕННЯ","ЕКІПІРОВКА","ОКУЛЯРИ","РЮКЗАКИ"},{"ВАНТАЖНІ","МОТОРИЗОВАНІ","ВОДНИЙ ТРАНСПОРТ","РУХОМЕ КРИЛО","ФЫКСОВАНЕ КРИЛО"},{"НАЙМАНЦІ","АРМІЯ","ЦИВІЛЬНІ","РОЗВІДКА","СПЕЦНАЗ"}};
-	typeTitles[] = {"АРСЕНАЛ","ТЕХНІКА","БАРАКИ"};
+	typeListTitles[] = {{"ЗБРОЯ","СПОРЯДЖЕННЯ","ЕКIПIРОВКА","ОКУЛЯРИ","РЮКЗАКИ"},{"ВАНТАЖНI","МОТОРИЗОВАНI","ВОДНИЙ ТРАНСПОРТ","РУХОМЕ КРИЛО","ФIКСОВАНЕ КРИЛО"},{"НАЙМАНЦI","АРМIЯ","ЦИВIЛЬНI","РОЗВIДКА","СПЕЦНАЗ"}};
+	typeTitles[] = {"АРСЕНАЛ","ТЕХНIКА","БАРАКИ"};
 
 	class controls {
 		// Main headers
@@ -52,7 +52,7 @@ class EVOR_dlg_shop {
 		};
 		class textPrice: RscStructuredText {
 			idc = 1005;
-			text = "<t align = 'left'>ВАРТІСТЬ</t>";
+			text = "<t align = 'left'>ВАРТIСТЬ</t>";
 			colorbackground[] = {0,0,0,0.6};
 			x = safezoneW * 0.640 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;

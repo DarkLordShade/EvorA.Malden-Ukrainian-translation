@@ -8,7 +8,7 @@ class Header {
 };
 onLoadName						= "EvorA";
 author							= "Sgt. Dennenboom [~EW~]";
-onLoadMission					= "Destroy the radiotower and clear out the enemy in each objective! Construct FOB's and buy equipment, vehicles and soldiers to be more effective. Read the briefing for more info!";
+onLoadMission					= "Знищiть радiовежу та зачистiть ворогiв в кожнiй iз зон! Будуйте FOB-и та купляйте екiпiровку, транспорт або наймайте солдат щоб бути бiльш ефективним. Бiльш детально читайте в брифiнгу!";
 
 // Difficulty
 enableItemsDropping				= 0;

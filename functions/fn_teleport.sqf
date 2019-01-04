@@ -16,8 +16,8 @@ if (_baseIndex >= 0) then {
 	_success = true;
 } else {
 	_target = getPosASL leader player;
-	if (player distance2D _target < 500) exitWith {hint "Не можна десантуватися на поточну позицію!";};
-	if (!isText (configFile >> "CfgVehicles" >> backpack player >> "ParachuteClass")) exitWith {hint "Десантування вимагає наявності паршуту!";};
+	if (player distance2D _target < 500) exitWith {hint "Не можна десантуватися на поточну позицiю!";};
+	if (!isText (configFile >> "CfgVehicles" >> backpack player >> "ParachuteClass")) exitWith {hint "Десантування вимагає наявностi паршуту!";};
 	_target = (_target getPos [random 100,random 360]) vectorAdd [0,0,2000 + random 500];
 	_string = format ["КООРДИНАТИ: %1",mapGridPosition _target];
 	_success = true;

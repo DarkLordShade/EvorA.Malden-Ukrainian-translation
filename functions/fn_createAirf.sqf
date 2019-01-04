@@ -36,4 +36,4 @@ publicVariable "EVOR_list_BaseService";
 _airfBase setMarkerAlpha 1;
 _airfBase setMarkerText _airfName;
 
-[[EVOR_var_SideFriendly,"HQ"],format ["%1 тепер під нашим контролем!",_airfName]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+[[EVOR_var_SideFriendly,"HQ"],format ["%1 тепер пiд нашим контролем!",_airfName]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
