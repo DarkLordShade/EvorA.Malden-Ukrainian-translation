@@ -15,7 +15,7 @@ _objActive set [5,true];
 if (isMultiplayer) then {
 	private _scorePlayers = allPlayers select {side group _x isEqualTo EVOR_var_SideFriendly};
 	{_x addScore EVOR_var_ScoreObjCap;} forEach _scorePlayers;
-	(format ["%1 funds received for capturing the objective!",EVOR_var_ScoreObjCap]) remoteExecCall ["hint",_scorePlayers,false];
+	(format ["%1 УО отримано за захоплення об’єкту!",EVOR_var_ScoreObjCap]) remoteExecCall ["hint",_scorePlayers,false];
 };
 
 // Changing color of _objMarker
@@ -39,10 +39,10 @@ deleteVehicle _objRT;
 if ([_objFlags,1] call BIS_fnc_bitflagsCheck) then {[_objActive] spawn EVOR_fnc_createAirf;};
 
 if (EVOR_list_ObjectiveQueue findIf {!(_x # 5)} >= 0) then {
-	[[EVOR_var_SideFriendly,"HQ"],"Great job men, the objective has been captured! Standby for redeployment."] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+	[[EVOR_var_SideFriendly,"HQ"],"Гарна робота, чувак. Об’єкт захоплено! Очікуй на передислокацію."] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 	sleep random [20,40,50];
 	[] call EVOR_fnc_objCreate;	// Create new objective
 } else {
-	[[EVOR_var_SideFriendly,"HQ"],"Great job men, you've completed the mission!"] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+	[[EVOR_var_SideFriendly,"HQ"],"Гарна робота, дядьку! Ти завершив місію!"] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 	[EVOR_var_OutroMusic] remoteExec ["EVOR_fnc_cinematicOutro",0,false];		// End mission
 };
