@@ -18,7 +18,7 @@ if (_dur > 0) then {
 	private _ctrlText = _ctrls select 0;
 	private _ctrlBar = _ctrls select 1;
 
-	_ctrlText ctrlSetStructuredText parseText format ["<t align = 'center' valign = 'middle'>%1...</t>",["Розряджання","Переспорядження"] select _up];
+	_ctrlText ctrlSetStructuredText parseText format ["<t align = 'center' valign = 'middle'>%1...</t>",["РОЗРЯДЖАННЯ","ПЕРЕСПОРЯДЖЕННЯ"] select _up];
 
 	// Progress bar
 	private _steps = 100;
