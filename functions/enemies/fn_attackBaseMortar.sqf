@@ -18,7 +18,7 @@ private _markerType = ["o_arty","b_art","n_art"] param [EVOR_var_SideEnemy call 
 private _marker = createMarker ["markerArty_"+str _group,_markerPos];
 _marker setMarkerShape "ICON";
 _marker setMarkerType _markerType;
-_marker setMarkerText "Artillery";
+_marker setMarkerText "Артилерія";
 
 // Keep firing until all mortars are dead
 while {!(_mortars isEqualTo [])} do {
