@@ -7,10 +7,10 @@ class EVOR_rsc_titleOutro {
 	controls[]		= {header,logo};
 	onLoad			= "uiNamespace setVariable [""EVOR_rsc_titleOutro"",_this select 0];";
 	onUnload		= "uiNamespace setVariable [""EVOR_rsc_titleOutro"",nil];";
-	
+
 	class header: RscStructuredText {
 		idc = -1;
-		text = "<t align = 'center'>MISSION COMPLETE!</t>";
+		text = "<t align = 'center'>МІСІЮ ЗАВЕРШЕНО!</t>";
 		x = safezoneW * 0.15 + safezoneX;
 		y = safezoneH * 0.15 + safezoneY;
 		w = safezoneW * 0.70;
