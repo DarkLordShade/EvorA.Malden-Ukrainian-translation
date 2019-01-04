@@ -22,7 +22,7 @@ private _actionScript = {
 };
 
 private _actionDur = 5;
-private _actionText = "Відсортувати";
+private _actionText = "Вилікувати";
 private _actionIcon = "\a3\ui_f\data\IGUI\Cfg\Actions\bandage_ca.paa";
 
 [_caller,_actionText,_actionIcon,_actionIcon,_actionCond,_actionCond,nil,nil,_actionScript,nil,nil,_actionDur,-6,false] call BIS_fnc_holdActionAdd;
