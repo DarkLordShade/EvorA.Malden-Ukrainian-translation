@@ -17,14 +17,14 @@ if (_dur > 0) then {
 	private _ctrls = [] call EVOR_fnc_dlgProgressOpen;
 	private _ctrlText = _ctrls select 0;
 	private _ctrlBar = _ctrls select 1;
-	
-	_ctrlText ctrlSetStructuredText parseText format ["<t align = 'center' valign = 'middle'>%1...</t>",["DE-SUPPLYING","RE-SUPPLYING"] select _up];
-	
+
+	_ctrlText ctrlSetStructuredText parseText format ["<t align = 'center' valign = 'middle'>%1...</t>",["Розряджання","Переспорядження"] select _up];
+
 	// Progress bar
 	private _steps = 100;
 	private _start = [1,0] select _up;
 	private _diff = [-1,1] select _up;
-	
+
 	private _condFail = {
 		(!local _veh)
 		or {(vehicle _caller != _veh)
@@ -33,7 +33,7 @@ if (_dur > 0) then {
 		or {(vectorMagnitude velocity _veh > 3)
 		or {((!isTouchingGround _veh) and {!surfaceIsWater getPos _veh})}}}}}
 	};
-	
+
 	private ["_progress"];
 	for "_i" from 1 to _steps do {
 		if ([_veh,_caller] call _condFail) exitWith {_success = false};
@@ -41,7 +41,7 @@ if (_dur > 0) then {
 		_ctrlBar progressSetPosition _progress;
 		sleep (_dur/_steps);
 	};
-	
+
 	// Close bar
 	(ctrlParent _ctrlText) closeDisplay 0;
 };
