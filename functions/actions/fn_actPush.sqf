@@ -20,4 +20,4 @@ private _actionScript = {
 };
 
 private _actionID = _caller addAction ["",_actionScript,nil,-10,true,false,"",_actionCond,-1,false];
-_caller setUserActionText [_actionID,"Push","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\take_ca.paa'/></t>"];
+_caller setUserActionText [_actionID,"Штовхнути","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\take_ca.paa'/></t>"];
