@@ -35,7 +35,7 @@ private _actionScript = {
 };
 
 private _display = getText (configFile >> "CfgVehicles" >> typeOf _veh >> "displayName");
-private _actionText = format ["Перезаряджання %1",_display];
+private _actionText = format ["Перезаряджання в %1",_display];
 private _actionIcon = "<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\reammo_ca.paa'/></t>";
 
 private _actionID = _veh addAction ["",_actionScript,nil,-5,true,true,"",_actionCond];
