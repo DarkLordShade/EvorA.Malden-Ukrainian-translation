@@ -3,7 +3,7 @@ class EVOR_dlg_menu {
 	movingEnable = false;
 	onLoad = "uiNamespace setVariable [""EVOR_dlg_menu"",_this select 0];";
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_menu"",nil];";
-	
+
 	class controls {
 		// Main headers
 		class title: RscStructuredText {
@@ -41,17 +41,17 @@ class EVOR_dlg_menu {
 		class headProgress: RscText {
 			idc = 1004;
 			colorbackground[] = {0,0,0,1};
-			text = "MISSION PROGRESS";
+			text = "ПРОГРЕС МІСІЇ";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.385 + safezoneY;
 			w = safezoneW * 0.400;
 			h = safezoneH * 0.020;
 		};
-		
+
 		// Menus
 		class buttonTrans: RscButton {
 			idc = 1005;
-			text = "FAST TRAVEL";
+			text = "ШВИДКА ПОДОРОЖ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.230 + safezoneY;
 			w = safezoneW * 0.200;
@@ -60,7 +60,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonGear: RscButton {
 			idc = 1006;
-			text = "ARSENAL";
+			text = "АРСЕНАЛ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.255 + safezoneY;
 			w = safezoneW * 0.200;
@@ -69,7 +69,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonVeh: RscButton {
 			idc = 1007;
-			text = "MOTORPOOL";
+			text = "ВОДНИЙ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.280 + safezoneY;
 			w = safezoneW * 0.200;
@@ -78,7 +78,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonUnit: RscButton {
 			idc = 1008;
-			text = "BARRACKS";
+			text = "БАРАКИ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.305 + safezoneY;
 			w = safezoneW * 0.200;
@@ -87,7 +87,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonFund: RscButton {
 			idc = 1009;
-			text = "FUND MANAGEMENT";
+			text = "КЕРУВАННЯ ФІНАНСАМИ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.330 + safezoneY;
 			w = safezoneW * 0.200;
@@ -96,18 +96,18 @@ class EVOR_dlg_menu {
 		};
 		class buttonSettings: RscButton {
 			idc = 1010;
-			text = "MISSION OPTIONS";
+			text = "НАЛАШТУВАННЯ МІСІЇ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.355 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
 			onButtonClick = "createDialog 'EVOR_dlg_settings';";
 		};
-		
+
 		// Progress
 		class textStateNumber: RscStructuredText {
 			idc = 1011;
-			text = "<t align = 'right'>Number: </t>";
+			text = "<t align = 'right'>Кількість: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.410 + safezoneY;
 			w = safezoneW * 0.100;
@@ -115,7 +115,7 @@ class EVOR_dlg_menu {
 		};
 		class textStateCurrent: RscStructuredText {
 			idc = 1012;
-			text = "<t align = 'right'>Objective: </t>";
+			text = "<t align = 'right'>Мета: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.435 + safezoneY;
 			w = safezoneW * 0.100;
@@ -123,7 +123,7 @@ class EVOR_dlg_menu {
 		};
 		class textStateTower: RscStructuredText {
 			idc = 1013;
-			text = "<t align = 'right'>Radio tower: </t>";
+			text = "<t align = 'right'>Радіовежа: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.460 + safezoneY;
 			w = safezoneW * 0.100;
@@ -150,11 +150,11 @@ class EVOR_dlg_menu {
 			w = safezoneW * 0.300;
 			h = safezoneH * 0.020;
 		};
-		
+
 		// Buttons
 		class buttonClose: RscButton {
 			idc = 1017;
-			text = "CLOSE";
+			text = "ЗАКРИТИ";
 			x = safezoneW * 0.505 + safezoneX;
 			y = safezoneH * 0.630 + safezoneY;
 			w = safezoneW * 0.195;
