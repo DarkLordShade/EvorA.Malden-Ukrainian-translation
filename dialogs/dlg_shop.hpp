@@ -3,10 +3,10 @@ class EVOR_dlg_shop {
 	movingEnable = false;
 	onLoad = "uiNamespace setVariable [""EVOR_dlg_shop"",_this select 0];";
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_shop"",nil];";
-	
-	typeListTitles[] = {{"WEAPONS","ITEMS","EQUIPMENT","GOGGLES","BACKPACKS"},{"SUPPLIES","MOTORIZED","NAVAL","ROTARY WING","FIXED-WING"},{"MERCENARY","ARMY","URBAN","RECON","SPECOP"}};
-	typeTitles[] = {"ARSENAL","MOTORPOOL","BARRACKS"};
-	
+
+	typeListTitles[] = {{"ЗБРОЯ","СПОРЯДЖЕННЯ","ЕКІПІРОВКА","ОКУЛЯРИ","РЮКЗАКИ"},{"ВАНТАЖНІ","МОТОРИЗОВАНІ","ВОДНИЙ ТРАНСПОРТ","РУХОМЕ КРИЛО","ФЫКСОВАНЕ КРИЛО"},{"НАЙМАНЦІ","АРМІЯ","ЦИВІЛЬНІ","РОЗВІДКА","СПЕЦНАЗ"}};
+	typeTitles[] = {"АРСЕНАЛ","ТЕХНІКА","БАРАКИ"};
+
 	class controls {
 		// Main headers
 		class title: RscStructuredText {
@@ -52,7 +52,7 @@ class EVOR_dlg_shop {
 		};
 		class textPrice: RscStructuredText {
 			idc = 1005;
-			text = "<t align = 'left'>PRICE</t>";
+			text = "<t align = 'left'>ВАРТІСТЬ</t>";
 			colorbackground[] = {0,0,0,0.6};
 			x = safezoneW * 0.640 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
@@ -71,7 +71,7 @@ class EVOR_dlg_shop {
 			columns[] = {-0.01,0.1,0.6,0.825};
 			onLBSelChanged = "_this call EVOR_fnc_dlgShopLnbChange;";
 		};
-		
+
 		// Buttons
 		class button0: RscButton {
 			idc = 1007;
@@ -108,10 +108,10 @@ class EVOR_dlg_shop {
 			w = safezoneW * 0.100;
 			h = safezoneH * 0.020;
 		};
-		
+
 		class buttonPurchase: RscButton {
 			idc = 1012;
-			text = "PURCHASE";
+			text = "ПРИДБАТИ";
 			x = safezoneW * 0.505 + safezoneX;
 			y = safezoneH * 0.830 + safezoneY;
 			w = safezoneW * 0.095;
@@ -121,7 +121,7 @@ class EVOR_dlg_shop {
 		};
 		class buttonClose: RscButton {
 			idc = 1013;
-			text = "BACK";
+			text = "НАЗАД";
 			x = safezoneW * 0.605 + safezoneX;
 			y = safezoneH * 0.830 + safezoneY;
 			w = safezoneW * 0.095;
