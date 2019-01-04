@@ -55,4 +55,4 @@ _fobMarker setMarkerShape "ICON";
 _fobMarker setMarkerType (["o_service","b_service","n_service"] param [EVOR_var_SideFriendly call BIS_fnc_sideID,"",[""]]);
 _fobMarker setMarkerText format ["FOB %1",_fobName];
 
-[[EVOR_var_SideFriendly,"HQ"],format ["FOB %1 constructed at grid %2",_fobName,mapGridPosition _fobPos]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+[[EVOR_var_SideFriendly,"HQ"],format ["FOB %1 подубовано за координатами %2",_fobName,mapGridPosition _fobPos]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
