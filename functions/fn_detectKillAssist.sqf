@@ -11,7 +11,7 @@ _unit addEventHandler [
 		private _hit = _this select 5;
 		private _source = _this select 6;
 		private _assistArray = _unit getVariable ["EVOR_var_KillAssists",[]];
-		
+
 		// Add player to assist list
 		if (
 			(isPlayer _source)
@@ -21,15 +21,15 @@ _unit addEventHandler [
 			_assistArray pushBackUnique _source;
 			_unit setVariable ["EVOR_var_KillAssists",_assistArray,false];
 		};
-		
+
 		// Pay out assist list when unit is disabled
 		if (!canMove _unit) then {
 			_unit removeAllEventHandlers "HandleDamage";
 			_unit setVariable ["EVOR_var_KillAssists",nil,false];
 			{_x addScore EVOR_var_ScoreKillAssist;} forEach _assistArray;
-			(format ["%1 funds received for assisting with eliminating an enemy air asset!",EVOR_var_ScoreKillAssist]) remoteExecCall ["hint",_assistArray,false];
+			(format ["%1 УО отримано за допопмогу в ліквідації ворожого повітряного транспорту!",EVOR_var_ScoreKillAssist]) remoteExecCall ["hint",_assistArray,false];
 		};
-		
+
 		nil;
 	}
 ];
