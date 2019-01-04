@@ -11,7 +11,7 @@ private _class		= _purchase param [0,"",[""]];
 private _price		= _purchase param [1,0,[0]];
 private _text		= _purchase param [4,"%1",[""]];
 
-if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Insufficient funds to purchase this!";};
+if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштів щоб придбати це!";};
 
 private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -45,5 +45,5 @@ playSound "scoreRemoved";
 // Unlock the mercenaries as given in the shopgear list
 if (_shopIndex == 0) then {
 	private _count = [_class] call EVOR_fnc_unlockUnit;
-	if (_count > 0) then {hintSilent format ["%1 new mercenaries available",_count];};
+	if (_count > 0) then {hintSilent format ["%1 нових споряджень доступно",_count];};
 };
