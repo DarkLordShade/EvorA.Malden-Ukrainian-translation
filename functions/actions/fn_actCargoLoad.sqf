@@ -19,10 +19,10 @@ private _actionCond = format [
 
 private _actionScript = {
 	params ["_carrier","_caller","_id","_params"];
-	
+
 	private _loadTypes = _params param [0,[],[[]]];
 	private _loadSize = _params param [1,0,[0]];
-	
+
 	private _allCargo = _carrier nearEntities [_loadTypes,_loadSize];
 	_allCargo = _allCargo select {(_carrier canVehicleCargo _x) select 0};
 	_allCargo = [_allCargo,[_carrier],{_input0 distance2D _x}] call BIS_fnc_sortBy;
@@ -32,4 +32,4 @@ private _actionScript = {
 };
 
 private _actionID = _veh addAction ["",_actionScript,[_loadTypes,_loadSize],20,true,true,"",_actionCond];
-_veh setUserActionText [_actionID,"Load cargo","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa'/></t>"];
+_veh setUserActionText [_actionID,"Завантажити вантаж","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa'/></t>"];
