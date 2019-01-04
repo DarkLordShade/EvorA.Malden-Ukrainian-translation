@@ -69,7 +69,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonVeh: RscButton {
 			idc = 1007;
-			text = "ТРАНСПОРТ";
+			text = "ТЕХНІКА";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.280 + safezoneY;
 			w = safezoneW * 0.200;
