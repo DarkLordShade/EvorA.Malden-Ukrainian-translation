@@ -18,14 +18,14 @@ EVOR_list_PurchasedUnits = missionNamespace getVariable ["EVOR_list_PurchasedUni
 EVOR_list_PurchasedUnits = EVOR_list_PurchasedUnits select {alive _x};
 
 if (count EVOR_list_PurchasedUnits >= EVOR_var_MaxUnits) exitWith {
-	hintSilent format ["You can only hire %1 mercenaries at a time!",EVOR_var_MaxUnits];
+	hintSilent format ["Ви можете винайняти лише %1 найманця зараз!",EVOR_var_MaxUnits];
 };
 
-if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Insufficient funds to purchase this!";};
+if (isMultiplayer and {score player < _price}) exitWith {hintSilent "Недостатньо коштів щоб придбати це!";};
 
 private _spawnPos = AGLToASL (player modelToWorld [0,5,0]);
 private _spawnDir = getDir player - 180;
 
 [player,_purchase,_spawnPos,_spawnDir] remoteExecCall ["EVOR_fnc_createObjectServer",2,false];
-hintSilent format ["%1 purchased for %2 funds!",_text,_price];
+hintSilent format ["%1 придбано за %2 УО!",_text,_price];
 playSound "scoreRemoved";
