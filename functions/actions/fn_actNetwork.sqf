@@ -12,4 +12,4 @@ private _actionCond = "
 private _actionScript = {_this call EVOR_fnc_dlgMenuOpen;};
 
 private _actionID = _caller addAction ["",_actionScript,nil,-5,false,true,"",_actionCond,-1,false];
-_caller setUserActionText [_actionID,"Support Network","<t size='2.5'><img image='a3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_connect_ca.paa'/></t>"];
+_caller setUserActionText [_actionID,"Меню Підтримки","<t size='2.5'><img image='a3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_connect_ca.paa'/></t>"];
