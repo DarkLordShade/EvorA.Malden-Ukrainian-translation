@@ -24,4 +24,4 @@ private _actionCond = format ["((%1) or {%2}) and {locked _target < 2}",_condEje
 private _actionScript = {moveOut (_this select 1);};
 
 private _actionID = _veh addAction ["",_actionScript,nil,20,true,false,"",_actionCond,-1,true];
-_veh setUserActionText [_actionID,"Eject","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa'/></t>"];
+_veh setUserActionText [_actionID,"Катапультуватися","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\eject_ca.paa'/></t>"];
