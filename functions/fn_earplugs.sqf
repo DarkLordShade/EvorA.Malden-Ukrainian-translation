@@ -9,10 +9,10 @@ waituntil {!isnull (finddisplay _mainIdd)};
 	{
 		if ((_this select 1) in actionKeys "User1") then {
 			if (soundVolume < 1) then {
-				hint "Earplugs removed";
+				hint "Беруші знято";
 				0.5 fadeSound 1;
 			} else {
-				hint "Earplugs inserted";
+				hint "Беруші одягнуто";
 				0.5 fadeSound 0.2;
 			};
 		};
