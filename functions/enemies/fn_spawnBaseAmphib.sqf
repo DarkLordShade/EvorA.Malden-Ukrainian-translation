@@ -29,12 +29,12 @@ for "_i" from 1 to _nAmphibGrp do {
 		_allUnits append ([_veh,_group] call EVOR_fnc_createVehicleCrew);
 		_allUnits append ([_veh,_group,_classesInf,1] call EVOR_fnc_createVehicleCargo);
 		_veh setUnloadInCombat [true,true];
-		
+
 		sleep 0.5;
 	};
-	
+
 	_group selectLeader (units _group select {driver vehicle _x != _x} select 0);
-	
+
 	// Add waypoints to make group do something (In this case patrol loop around random positions)
 	{deleteWaypoint _x;} forEach waypoints _group;
 	_WP = _group addWayPoint [[_mainBaseMarker,50,200,10] call EVOR_fnc_findClosestWater,20];
@@ -44,7 +44,7 @@ for "_i" from 1 to _nAmphibGrp do {
 	_WP setWaypointSpeed "FULL";
 	_WP setWaypointCompletionRadius 50;
 	_WP setWayPointType "UNLOAD";
-	
+
 	_WP = _group addWayPoint [[waypointPosition _WP,50] call EVOR_fnc_findRandPos,0];
 	_WP setWaypointFormation "DIAMOND";
 	_WP setWaypointBehaviour "UNCHANGED";
@@ -52,11 +52,11 @@ for "_i" from 1 to _nAmphibGrp do {
 	_WP setWaypointSpeed "UNCHANGED";
 	_WP setWaypointCompletionRadius 30;
 	_WP setWayPointType "HOLD";
-	
+
 	sleep 0.5;
 };
 
-[[EVOR_var_SideFriendly,"HQ"],format ["The enemy is mounting an amphibious attack on our MOB; prepare to fend them off!",markerText _mainBaseMarker]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
+[[EVOR_var_SideFriendly,"HQ"],format ["Ворог підготував амфібій для атаки на нашу MOB; готуйтеся відбивати!",markerText _mainBaseMarker]] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 
 [_allUnits] call EVOR_fnc_setUnitSkill;
 
