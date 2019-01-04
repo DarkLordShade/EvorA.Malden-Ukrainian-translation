@@ -3,11 +3,11 @@ class EVOR_dlg_settings {
 	movingEnable = false;
 	onLoad = "uiNamespace setVariable [""EVOR_dlg_settings"",_this select 0];";
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_settings"",nil];";
-	
+
 	mark3DRangeValues[] = {50,100,250,500,1000,2000,5000,10000};
-	mark3DColorValues[] = {{"RED","[EAST] call BIS_fnc_sideColor"},{"BLUE","[WEST] call BIS_fnc_sideColor"},{"GREEN","[INDEPENDENT] call BIS_fnc_sideColor"},{"PURPLE","[CIVILIAN] call BIS_fnc_sideColor"},{"GRAY","[0.5,0.5,0.5,1]"},{"WHITE","[1,1,1,1]"}};
-	visTerrainValues[] = {"LOW","STANDARD","HIGH","VERY HIGH","ULTRA"};
-	
+	mark3DColorValues[] = {{"ЧЕРВОНИЙ","[EAST] call BIS_fnc_sideColor"},{"СИНІЙ","[WEST] call BIS_fnc_sideColor"},{"ЗЕЛЕНИЙ","[INDEPENDENT] call BIS_fnc_sideColor"},{"ПУРПУРОВИЙ","[CIVILIAN] call BIS_fnc_sideColor"},{"СІРИЙ","[0.5,0.5,0.5,1]"},{"БІЛИЙ","[1,1,1,1]"}};
+	visTerrainValues[] = {"НИЗЬКО","СТАНДАРТНО","ВИСОКО","ДУЖЕ ВИСОКО","УЛЬТРА"};
+
 	class controls {
 		// Main headers
 		class title: RscStructuredText {
@@ -17,7 +17,7 @@ class EVOR_dlg_settings {
 			y = safezoneH * 0.175 + safezoneY;
 			w = safezoneW * 0.400;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>MISSION OPTIONS</t><t align = 'right'>%1</t>"",profileName];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>НАЛАШТУВАННЯ МІСІЇ</t><t align = 'right'>%1</t>"",profileName];";
 		};
 		class fps: RscStructuredText {
 			idc = 1001;
@@ -47,18 +47,18 @@ class EVOR_dlg_settings {
 		};
 		class headVisibility: RscText {
 			idc = 1004;
-			text = "VISIBILITY";
+			text = "ВИДИМІСТЬ";
 			colorbackground[] = {0,0,0,1};
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.425 + safezoneY;
 			w = safezoneW * 0.400;
 			h = safezoneH * 0.020;
 		};
-		
+
 		// Controls text
 		class textMarkerEnabled: RscStructuredText {
 			idc = 1005;
-			text = "<t align = 'right'>ENABLED: </t>";
+			text = "<t align = 'right'>УВІМКНУТО: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.250 + safezoneY;
 			w = safezoneW * 0.100;
@@ -66,7 +66,7 @@ class EVOR_dlg_settings {
 		};
 		class textMarkerRange: RscStructuredText {
 			idc = 1006;
-			text = "<t align = 'right'>RANGE: </t>";
+			text = "<t align = 'right'>ДАЛЬНІСТЬ: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.275 + safezoneY;
 			w = safezoneW * 0.100;
@@ -74,7 +74,7 @@ class EVOR_dlg_settings {
 		};
 		class textMarkerColor: RscStructuredText {
 			idc = 1007;
-			text = "<t align = 'right'>COLOR: </t>";
+			text = "<t align = 'right'>КОЛІР: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.300 + safezoneY;
 			w = safezoneW * 0.100;
@@ -82,7 +82,7 @@ class EVOR_dlg_settings {
 		};
 		class textVisOverall: RscStructuredText {
 			idc = 1008;
-			text = "<t align = 'right'>OVERALL: </t>";
+			text = "<t align = 'right'>ЗАГАЛЬНА: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.450 + safezoneY;
 			w = safezoneW * 0.100;
@@ -90,7 +90,7 @@ class EVOR_dlg_settings {
 		};
 		class textVisObject: RscStructuredText {
 			idc = 1009;
-			text = "<t align = 'right'>OBJECT: </t>";
+			text = "<t align = 'right'>ОБ’ЄКТИ: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.475 + safezoneY;
 			w = safezoneW * 0.100;
@@ -98,7 +98,7 @@ class EVOR_dlg_settings {
 		};
 		class textVisShadow: RscStructuredText {
 			idc = 1010;
-			text = "<t align = 'right'>SHADOW: </t>";
+			text = "<t align = 'right'>ТІНІ: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.500 + safezoneY;
 			w = safezoneW * 0.100;
@@ -106,13 +106,13 @@ class EVOR_dlg_settings {
 		};
 		class textVisGrid: RscStructuredText {
 			idc = 1011;
-			text = "<t align = 'right'>TERRAIN: </t>";
+			text = "<t align = 'right'>ЗЕМЛЯ: </t>";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.525 + safezoneY;
 			w = safezoneW * 0.100;
 			h = safezoneH * 0.020;
 		};
-		
+
 		// Marker controls
 		class mark3DCheckbox: RscCheckBox {
 			idc = 1012;
@@ -141,7 +141,7 @@ class EVOR_dlg_settings {
 			onLoad = "_this call EVOR_fnc_dlgSettingsComboColor;";
 			onLBSelChanged = "_this call EVOR_fnc_dlgSettingsComboColor;";
 		};
-		
+
 		// Visibility Sliders
 		class sliderOverall: RscSlider {
 			idc = 1015;
@@ -179,7 +179,7 @@ class EVOR_dlg_settings {
 			onLoad = "_this call EVOR_fnc_dlgSettingsComboGrid;";
 			onLBSelChanged = "_this call EVOR_fnc_dlgSettingsComboGrid;";
 		};
-		
+
 		// Visibility Edits
 		class editOverall: RscEdit {
 			idc = 1019;
@@ -208,11 +208,11 @@ class EVOR_dlg_settings {
 			onLoad = "_this call EVOR_fnc_dlgSettingsEditVis;";
 			onChar = "_this call EVOR_fnc_dlgSettingsEditVis;";
 		};
-			
+
 		// Buttons
 		class buttonClose: RscButton {
 			idc = 1022;
-			text = "BACK";
+			text = "НАЗАД";
 			x = safezoneW * 0.605 + safezoneX;
 			y = safezoneH * 0.630 + safezoneY;
 			w = safezoneW * 0.095;
