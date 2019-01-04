@@ -16,10 +16,10 @@ if (_baseIndex >= 0) then {
 	_success = true;
 } else {
 	_target = getPosASL leader player;
-	if (player distance2D _target < 500) exitWith {hint "You cannot HALO-jump to your own position!";};
-	if (!isText (configFile >> "CfgVehicles" >> backpack player >> "ParachuteClass")) exitWith {hint "HALO-jumping requires a parachute!";};
+	if (player distance2D _target < 500) exitWith {hint "Не можна десантуватися на поточну позицію!";};
+	if (!isText (configFile >> "CfgVehicles" >> backpack player >> "ParachuteClass")) exitWith {hint "Десантування вимагає наявності паршуту!";};
 	_target = (_target getPos [random 100,random 360]) vectorAdd [0,0,2000 + random 500];
-	_string = format ["GRID: %1",mapGridPosition _target];
+	_string = format ["КООРДИНАТИ: %1",mapGridPosition _target];
 	_success = true;
 };
 
@@ -35,7 +35,7 @@ disableUserInput true;
 
 sleep 0.5;
 
-[[["TRAVELLING..."]],safezoneW*0.3+safezoneX,safezoneH*0.7+safezoneY] spawn BIS_fnc_typeText2;
+[[["ПОДОРОЖУВАННЯ..."]],safezoneW*0.3+safezoneX,safezoneH*0.7+safezoneY] spawn BIS_fnc_typeText2;
 
 player setPosASL _target;
 
