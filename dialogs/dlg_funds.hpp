@@ -3,9 +3,9 @@ class EVOR_dlg_funds {
 	movingEnable = false;
 	onLoad = "uiNamespace setVariable [""EVOR_dlg_funds"",_this select 0];";
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_funds"",nil];";
-	
+
 	transferScoreValues[] = {1,5,10,20,50,75,100};
-	
+
 	class controls {
 		// Main headers
 		class title: RscStructuredText {
@@ -15,7 +15,7 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.175 + safezoneY;
 			w = safezoneW * 0.400;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>FUND MANAGEMENT</t><t align = 'right'>%1</t>"",profileName];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>КЕРУВАННЯ ФІНАНСАМИ</t><t align = 'right'>%1</t>"",profileName];";
 		};
 		class score: RscStructuredText {
 			idc = 1001;
@@ -36,7 +36,7 @@ class EVOR_dlg_funds {
 		};
 		class headPlayers: RscText {
 			idc = 1003;
-			text = "PLAYERS";
+			text = "ГРАВЦІ";
 			x = safezoneW * 0.300 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.125;
@@ -45,7 +45,7 @@ class EVOR_dlg_funds {
 		};
 		class headFunds: RscText {
 			idc = 1004;
-			text = "FUNDS";
+			text = "ФІНАНСИ";
 			x = safezoneW * 0.425 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.075;
@@ -54,7 +54,7 @@ class EVOR_dlg_funds {
 		};
 		class headTransfer: RscText {
 			idc = 1005;
-			text = "AMOUNT";
+			text = "БАЛАНС";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.200;
@@ -63,14 +63,14 @@ class EVOR_dlg_funds {
 		};
 		class headSources: RscText {
 			idc = 1006;
-			text = "FUND SOURCES";
+			text = "ДЖЕРЕЛА НАДХОДЖЕННЯ";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.425 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
 			colorbackground[] = {0,0,0,1};
 		};
-		
+
 		// Player ListNBox
 		class listNBox: RscListNbox {
 			idc = 1007;
@@ -82,7 +82,7 @@ class EVOR_dlg_funds {
 			onLoad = "_this spawn EVOR_fnc_dlgFundsLnbFill;";
 			onLBSelChanged = "_this call EVOR_fnc_dlgFundsLnbChange;";
 		};
-		
+
 		// Amount combobox
 		class combo: RscCombo {
 			idc = 1008;
@@ -92,11 +92,11 @@ class EVOR_dlg_funds {
 			h = safezoneH * 0.020;
 			onLoad = "_this call EVOR_fnc_dlgFundsCombo;";
 		};
-		
+
 		// Score displays
 		class textInf: RscStructuredText {
 			idc = 1009;
-			text = "<t align='left'>Infantry: </t><t align = 'right'>1</t>";
+			text = "<t align='left'>Піхота: </t><t align = 'right'>1</t>";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.450 + safezoneY;
 			w = safezoneW * 0.200;
@@ -104,7 +104,7 @@ class EVOR_dlg_funds {
 		};
 		class textVeh: RscStructuredText {
 			idc = 1010;
-			text = "<t align='left'>Vehicle: </t><t align = 'right'>2</t>";
+			text = "<t align='left'>Транспорт: </t><t align = 'right'>2</t>";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.475 + safezoneY;
 			w = safezoneW * 0.200;
@@ -112,7 +112,7 @@ class EVOR_dlg_funds {
 		};
 		class textArm: RscStructuredText {
 			idc = 1011;
-			text = "<t align='left'>Armor: </t><t align = 'right'>3</t>";
+			text = "<t align='left'>Броня: </t><t align = 'right'>3</t>";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.500 + safezoneY;
 			w = safezoneW * 0.200;
@@ -120,7 +120,7 @@ class EVOR_dlg_funds {
 		};
 		class textAir: RscStructuredText {
 			idc = 1012;
-			text = "<t align='left'>Aircraft: </t><t align = 'right'>5</t>";
+			text = "<t align='left'>Повітрянні судна: </t><t align = 'right'>5</t>";
 			x = safezoneW * 0.500 + safezoneX;
 			y = safezoneH * 0.525 + safezoneY;
 			w = safezoneW * 0.200;
@@ -132,7 +132,7 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.550 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Capture: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreObjCap];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Захоплення: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreObjCap];";
 		};
 		class textRT: RscStructuredText {
 			idc = 1014;
@@ -140,7 +140,7 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.575 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Radio tower: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreObjRT];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Радіовежа: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreObjRT];";
 		};
 		class textAssist: RscStructuredText {
 			idc = 1015;
@@ -148,13 +148,13 @@ class EVOR_dlg_funds {
 			y = safezoneH * 0.600 + safezoneY;
 			w = safezoneW * 0.200;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Air kill assist: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreKillAssist];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align='left'>Надання допомоги атаці з повітря: </t><t align = 'right'>%1</t>"",EVOR_var_ScoreKillAssist];";
 		};
 
 		// Buttons
 		class buttonTransfer: RscButton {
 			idc = 1016;
-			text = "TRANSFER";
+			text = "ПЕРЕВЕСТИ";
 			x = safezoneW * 0.505 + safezoneX;
 			y = safezoneH * 0.630 + safezoneY;
 			w = safezoneW * 0.095;
