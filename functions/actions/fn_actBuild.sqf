@@ -10,10 +10,10 @@ private _actionCond = "(isNull objectParent _this) and {(alive _target) and {(cr
 private _actionScript = {
 	params ["_veh","_caller","_id","_params"];
 	private _fobPos	= getPos _veh;
-	
+
 	private _baseMarkers = EVOR_list_BaseCore apply {_x select 0};
-	if (_baseMarkers findIf {_fobPos distance2D getMarkerPos _x < EVOR_var_FOBDistance} >= 0) exitWith {hint "Too close to an existing base!";};
-	
+	if (_baseMarkers findIf {_fobPos distance2D getMarkerPos _x < EVOR_var_FOBDistance} >= 0) exitWith {hint "Занадто близько до існуючої бази!";};
+
 	private _obstructions = [
 		"TREE","SMALL TREE","BUILDING","HOUSE","CHURCH","CHAPEL","CROSS",
 		"ROCK","BUNKER","FORTRESS","FOUNTAIN","VIEW-TOWER","LIGHTHOUSE",
@@ -21,13 +21,13 @@ private _actionScript = {
 		"TRANSMITTER","STACK","RUIN","TOURISM","WATERTOWER","ROCKS","POWERSOLAR",
 		"POWERWAVE","POWERWIND","SHIPWRECK"
 	];
-	
-	if (surfaceIsWater _fobPos) exitWith {hint "Location is on water!";};
-	if (_fobPos isFlatEmpty [-1,-1,0.3,10,-1,false] isEqualTo []) exitWith {hint "Location is too steep!";};
-	if (!(nearestTerrainObjects [_fobPos,_obstructions,10,false,true] isEqualTo [])) exitWith {hint "Location is obstructed!";};
+
+	if (surfaceIsWater _fobPos) exitWith {hint "Будування на воді!";};
+	if (_fobPos isFlatEmpty [-1,-1,0.3,10,-1,false] isEqualTo []) exitWith {hint "Дуже круто для будування!";};
+	if (!(nearestTerrainObjects [_fobPos,_obstructions,10,false,true] isEqualTo [])) exitWith {hint "Перешкода для будування!";};
 
 	[_veh] remoteExec ["EVOR_fnc_createFob",2,false];
 };
 
 private _actionID = _veh addAction ["",_actionScript,nil,-6,true,true,"",_actionCond,15];
-_veh setUserActionText [_actionID,"Construct FOB","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\takeflag_ca.paa'/></t>"];
+_veh setUserActionText [_actionID,"Побудувати FOB","<t size='2.5'><img image='a3\ui_f\data\IGUI\Cfg\Actions\takeflag_ca.paa'/></t>"];
