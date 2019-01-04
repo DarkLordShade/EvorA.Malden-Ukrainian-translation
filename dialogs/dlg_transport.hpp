@@ -3,7 +3,7 @@ class EVOR_dlg_transport {
 	movingEnable = false;
 	onLoad = "uiNamespace setVariable [""EVOR_dlg_transport"",_this select 0];";
 	onUnload = "uiNamespace setVariable [""EVOR_dlg_transport"",nil];";
-	
+
 	class controls {
 		// Main headers
 		class title: RscStructuredText {
@@ -13,7 +13,7 @@ class EVOR_dlg_transport {
 			y = safezoneH * 0.175 + safezoneY;
 			w = safezoneW * 0.600;
 			h = safezoneH * 0.020;
-			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>FAST TRAVEL</t><t align = 'right'>%1</t>"",profileName];";
+			onLoad = "(_this select 0) ctrlSetStructuredText parseText format [""<t align = 'left'>ШВИДКА ПОДОРОЖ</t><t align = 'right'>%1</t>"",profileName];";
 		};
 		class score: RscStructuredText {
 			idc = 1000;
@@ -41,14 +41,14 @@ class EVOR_dlg_transport {
 		};
 		class headDestination: RscText {
 			idc = 1003;
-			text = "SELECT DESTINATION";
+			text = "ОБЕРІТЬ ПРИЗНАЧЕННЯ";
 			x = safezoneW * 0.200 + safezoneX;
 			y = safezoneH * 0.225 + safezoneY;
 			w = safezoneW * 0.195;
 			h = safezoneH * 0.020;
 			colorbackground[] = {0,0,0,1};
 		};
-		
+
 		// Listbox
 		class list: RscListNBox {
 			idc = 1004;
@@ -59,7 +59,7 @@ class EVOR_dlg_transport {
 			onLoad = "_this call EVOR_fnc_dlgTransportLnbFill;";
 			onLBSelChanged = "_this call EVOR_fnc_dlgTransportLnbChange;";
 		};
-		
+
 		// Map
 		class map: RscMapControl {
 			idc = 1005;
@@ -68,11 +68,11 @@ class EVOR_dlg_transport {
 			w = safezoneW * 0.390;
 			h = safezoneH * 0.390;
 		};
-		
+
 		// Buttons
 		class buttonTravel: RscButton {
 			idc = 1006;
-			text = "TRAVEL";
+			text = "ПОДОРОЖУВАТИ";
 			x = safezoneW * 0.605 + safezoneX;
 			y = safezoneH * 0.630 + safezoneY;
 			w = safezoneW * 0.095;
@@ -82,7 +82,7 @@ class EVOR_dlg_transport {
 		};
 		class buttonClose: RscButton {
 			idc = 1007;
-			text = "BACK";
+			text = "НАЗАД";
 			x = safezoneW * 0.705 + safezoneX;
 			y = safezoneH * 0.630 + safezoneY;
 			w = safezoneW * 0.095;
