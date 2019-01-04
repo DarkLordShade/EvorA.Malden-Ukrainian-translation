@@ -24,7 +24,7 @@ private _taskName = if ([_objFlags,1] call BIS_fnc_bitflagsCheck) then {_objName
 	EVOR_var_SideFriendly,
 	"task_"+_objName,
 	[
-		format ["Find and destroy the radio tower in %1 to prevent the enemy from calling in reinforcements, then clear the town from remaining opposition.",_taskName],
+		format ["Знайдіть та знищіть радіовежу в %1 щоб позбавити ворога можливості викликати поповнення, потім зачистіть місто від ворожих солдат що залишились.",_taskName],
 		"Capture "+_taskName,
 		_taskName
 	],_objPos,"Assigned",1,true,"Attack",true
@@ -32,7 +32,7 @@ private _taskName = if ([_objFlags,1] call BIS_fnc_bitflagsCheck) then {_objName
 
 // First delete pre-existing radio towers and remove the RT message from JIP list to avoid confusion
 {hideObjectGlobal _x;} forEach (nearestObjects [_objPos,["Land_TTowerSmall_1_F","Land_TTowerSmall_2_F",EVOR_var_ObjRTType],_objRadius+500]);
-remoteExecCall ["","JIP_ObjRT"]; 
+remoteExecCall ["","JIP_ObjRT"];
 
 // Then create the radio tower objective
 private _objRT = createVehicle [EVOR_var_ObjRTType,[_objPos,[0.2*_objRadius,0.6*_objRadius],360,0,5] call EVOR_fnc_findRandPos,[],0,"NONE"];
@@ -44,10 +44,10 @@ _objRT addEventHandler [
 			if (_damage >= 1) then {
 				[
 					[EVOR_var_SideFriendly,"HQ"],
-					format ["Well done! %1 has taken down the enemy's radio tower, preventing them from calling in further reinforcements!",[name _source,"Somebody"] select isNull _source]
+					format ["Гарно спрацьовано! %1 знищив ворожу радіовежу, тим самим позбавивши ворога можливості викликати підтримку в подальшому!",[name _source,"Somebody"] select isNull _source]
 				] remoteExecCall ["sideChat",EVOR_var_SideFriendly,false];
 				if (isMultiplayer and {!isNull _source}) then {_source addScore EVOR_var_ScoreObjRT;};
-				
+
 				_target removeAllEventHandlers "HandleDamage";
 			};
 			_damage
@@ -58,5 +58,5 @@ _objRT addEventHandler [
 // Set global objective state (for use in main gui)
 missionNamespace setVariable ["EVOR_var_ObjState",[_objIndex+1,count EVOR_list_ObjectiveQueue,_taskName,_objRT],true];
 
-[_objActive,_objRT] spawn EVOR_fnc_objPopulate; 
+[_objActive,_objRT] spawn EVOR_fnc_objPopulate;
 [_objActive,_objRT] spawn EVOR_fnc_objCheck;
