@@ -9,7 +9,7 @@ private _caller = param [1,player,[objNull]];
 private _baseIndex = EVOR_list_BaseCore findIf {_caller distance2D getMarkerPos (_x # 0) < (_x # 1)};
 if (_baseIndex < 0) exitWith {};
 private _baseName = toUpper markerText (EVOR_list_BaseCore select _baseIndex select 0);
-private _text = format ["<t align = 'left'>WELCOME TO %1</t><t align = 'right'>%2</t>",_baseName,profileName];
+private _text = format ["<t align = 'left'>ВІТАЄМО В %1</t><t align = 'right'>%2</t>",_baseName,profileName];
 
 private _dlgMenu = "EVOR_dlg_menu";
 createDialog _dlgMenu;
@@ -34,4 +34,4 @@ private _progress = missionNamespace getVariable ["EVOR_var_ObjState",[0,0,"",ob
 
 _ctrlNumber ctrlSetStructuredText parseText format ["<t align = 'left'>%1/%2</t>",_progress select 0,_progress select 1];
 _ctrlCurrent ctrlSetStructuredText parseText format ["<t align = 'left'>%1</t>",_progress select 2];
-_ctrlTower ctrlSetStructuredText parseText format ["<t align = 'left'>%1</t>",["Destroyed","Intact"] select alive (_progress select 3)];
+_ctrlTower ctrlSetStructuredText parseText format ["<t align = 'left'>%1</t>",["Знищено","Непошкоджено"] select alive (_progress select 3)];
