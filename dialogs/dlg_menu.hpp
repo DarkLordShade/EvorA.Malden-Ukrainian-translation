@@ -96,7 +96,7 @@ class EVOR_dlg_menu {
 		};
 		class buttonSettings: RscButton {
 			idc = 1010;
-			text = "НАЛАШТУВАННЯ МIСIЇ";
+			text = "НАЛАШТУВАТИ МIСIЮ";
 			x = safezoneW * 0.400 + safezoneX;
 			y = safezoneH * 0.355 + safezoneY;
 			w = safezoneW * 0.200;
